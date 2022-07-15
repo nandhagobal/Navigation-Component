@@ -8,11 +8,24 @@
     android:layout_gravity="center"
     android:orientation="vertical">
 
-    <TextView
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:hint="username"
+        android:id="@+id/userNameEV"
+        android:textSize="16dp"></EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:hint="password"
+        android:id="@+id/passwordEV"
+        android:textSize="16dp"></EditText>
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:textSize="16dp"></TextView>
-
-
+        android:id="@+id/loginButton"
+        android:text="Login"></Button>
 </LinearLayout>
