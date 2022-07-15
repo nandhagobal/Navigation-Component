@@ -11,10 +11,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="16dp"
         android:text="home fragment"></TextView>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/loginButton"
         android:text="Login"></Button>
 
 </LinearLayout>
