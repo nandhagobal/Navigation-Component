@@ -4,16 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-   <androidx.fragment.app.FragmentContainerView
-       android:id="@+id/navHostContainer"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:name="androidx.navigation.fragment.NavHostFragment"
-       app:defaultNavHost="true"
-       app:navGraph="@navigation/nav_graph"
-       >
-   </androidx.fragment.app.FragmentContainerView>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:background="@color/purple_500"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        ></androidx.appcompat.widget.Toolbar>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/navHostContainer"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"></androidx.fragment.app.FragmentContainerView>
 
 </LinearLayout>
