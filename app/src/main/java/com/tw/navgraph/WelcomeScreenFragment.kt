@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.navOptions
 
 class WelcomeScreenFragment : Fragment(R.layout.fragment_welcome_screen) {
     lateinit var goBackToHomeButton :Button
@@ -19,7 +20,11 @@ class WelcomeScreenFragment : Fragment(R.layout.fragment_welcome_screen) {
 
          goBackToHomeButton.setOnClickListener{
              val action = WelcomeScreenFragmentDirections.actionWelcomeScreenFragmentToHomeFragment()
-             findNavController().navigate(action)
+             findNavController().navigate(action, navOptions{
+                 popUpTo(R.id.homeFragment){
+                     inclusive = true
+                 }
+             })
          }
     }
 }
