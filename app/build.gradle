@@ -16,8 +16,16 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    buildFeatures {
+        viewBinding = true
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.2.0-beta01"
+    }
 
     buildTypes {
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -27,12 +35,27 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
 }
 
 dependencies {
+    implementation 'androidx.compose.ui:ui:1.1.1'
+    // Tooling support (Previews, etc.)
+    implementation 'androidx.compose.ui:ui-tooling:1.1.1'
+    // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+    implementation 'androidx.compose.foundation:foundation:1.1.1'
+    // Material Design
+    implementation 'androidx.compose.material:material:1.1.1'
+    // Material design icons
+    implementation 'androidx.compose.material:material-icons-core:1.1.1'
+    implementation 'androidx.compose.material:material-icons-extended:1.1.1'
+    // Integration with observables
+    implementation 'androidx.compose.runtime:runtime-livedata:1.1.1'
+    implementation 'io.coil-kt:coil-compose:2.1.0'
+    implementation 'androidx.compose.runtime:runtime-rxjava2:1.1.1'
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.0")
 
