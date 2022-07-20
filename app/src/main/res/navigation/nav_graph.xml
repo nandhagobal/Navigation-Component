@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.tw.navgraph.LoginFragment"
+        android:name="com.tw.navgraph.LoginScreenContainer"
         android:label="Login"
         tools:layout="@layout/fragment_login">
         <action
