@@ -1,0 +1,6 @@
+fileignoreconfig:
+- filename: app/src/main/res/layout/fragment_login.xml
+  checksum: 39fc32742b85ebd7dc7f964280bfe69cc8c314ee040b7d12e3d742789e67cfcd
+- filename: app/src/main/java/com/tw/navgraph/LoginScreen.kt
+  checksum: 24afaac13bde907c29587bf01a91ae5ae899c5c80df851a4b98c48cd346d03f4
+version: ""

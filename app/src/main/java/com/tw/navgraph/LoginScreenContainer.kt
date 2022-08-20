@@ -8,6 +8,8 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavDirections
 import androidx.navigation.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
+import kotlin.concurrent.fixedRateTimer
 
 class LoginScreenContainer :Fragment() {
     override fun onCreateView(
