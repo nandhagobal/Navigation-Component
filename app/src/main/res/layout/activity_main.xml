@@ -18,10 +18,20 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/navHostContainer"
+        android:layout_weight="9"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph"></androidx.fragment.app.FragmentContainerView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_weight="1"
+        android:id="@+id/bottomNavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="0dp"
+        app:itemActiveIndicatorStyle="@color/purple_500"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_navigation_items"></com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </LinearLayout>

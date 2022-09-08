@@ -5,7 +5,9 @@ import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController : NavController
@@ -18,6 +20,11 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(findViewById(R.id.toolBar))
         setupActionBarWithNavController(navController,appBarConfiguration)
+
+        val bottomNavBar = findViewById<BottomNavigationView>(R.id.bottomNavigationBar);
+
+        NavigationUI.setupWithNavController(bottomNavBar,navController);
+
 
     }
 
